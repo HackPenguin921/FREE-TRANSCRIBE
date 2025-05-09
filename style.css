@@ -1,0 +1,7 @@
+#clearButton {
+    background-color: #9E9E9E;
+    color: white;
+}
+#clearButton:disabled {
+    background-color: #ddd;
+}

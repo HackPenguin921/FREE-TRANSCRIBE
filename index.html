@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声認識デモ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #startButton, #stopButton, #saveButton, #changeLangButton {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        #startButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #startButton:disabled {
+            background-color: #ddd;
+        }
+        #stopButton {
+            background-color: #f44336;
+            color: white;
+        }
+        #stopButton:disabled {
+            background-color: #ddd;
+        }
+        #saveButton {
+            background-color: #2196F3;
+            color: white;
+        }
+        #saveButton:disabled {
+            background-color: #ddd;
+        }
+        #changeLangButton {
+            background-color: #FFC107;
+            color: white;
+        }
+        #changeLangButton:disabled {
+            background-color: #ddd;
+        }
+        #textLog {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            height: 250px;
+            overflow-y: auto;
+            font-size: 18px;
+            white-space: pre-wrap;
+            text-align: left;
+            color: #333;
+        }
+        .line {
+            margin-bottom: 10px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>音声認識デモ</h2>
+        <div class="button-group">
+            <button id="startButton">録音開始</button>
+            <button id="stopButton" disabled>録音停止</button>
+            <button id="saveButton" disabled>保存</button>
+            <button id="changeLangButton">言語変更</button>
+            <button id="clearButton" disabled>データ削除</button>
+        </div>
+        
+        <div id="textLog"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
